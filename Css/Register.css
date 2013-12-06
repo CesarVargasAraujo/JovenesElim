@@ -1,0 +1,12 @@
+﻿.register-body { padding-top: 70px !important; background: url("/Image/Register/201312 Header.png") repeat-x scroll 0 0 / 75% auto rgba(0, 0, 0, 0); }
+	.register-body .register-header { margin-bottom: 25px; }
+	.register-body .register-title { font: bold 40px Monotype Corsiva,segoe ui,Arial,sans-serif; text-align: center; color: #CC0000; text-shadow: 2px 2px 2px #D4DFD7; }
+	.register-body .register-date { margin-top: -12px; text-align: center; }
+
+/*Custome*/
+.general-panel .general-panel-title { color: #CC0000; }
+.ui-button { float: right; margin-right: 95px; }
+
+.DataTable .DataFilter td, .DataTable td.ColumnHeader, .DataTable td.ColumnHeader.Sortable, .DataTable .ColumnHeader.Sortable.Asc, .DataTable .ColumnHeader.Sortable.Desc { background-color: #CC0000; }
+.DataTable tbody .Age { text-align: center; }
+.DataTable tbody .Cooperation  { text-align:right; }

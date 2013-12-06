@@ -1,0 +1,8 @@
+﻿body { padding: 0px; background-color: #CBB67F; font: normal 14px "Comic Sans MS", segoe ui,Arial,sans-serif; color: #515151; }
+.main-wrapper { width: 980px; height: auto; margin: -8px auto 0px; padding: 0px; background-color: #FFF; }
+.main-header { width: 100%; height: auto; float: left; border-bottom: 2px solid #8B5A25; }
+	.main-header .main-logo { float: left; }
+	.main-header .main-eslogan { float: right; }
+	.main-header .main-text { width: 595px; height: 123px; float: left; padding: 10px; text-align: center; font: normal 35px Monotype Corsiva, segoe ui,Arial,sans-serif; color: #8B5A25; background: url("/Image/_Main/Menu.png") repeat-x scroll 0 0 / auto 143px rgba(0, 0, 0, 0); border-right: 2px solid #8B5A25; }
+.main-body { width: calc(100%); height: auto; float: left; padding: 0px; background-color: #FFFFFF; }
+	.main-body .main-container { width: calc(100% - 60px); height: auto; padding: 30px; float: left; }

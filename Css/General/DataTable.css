@@ -1,0 +1,49 @@
+﻿.DataTable { width: 100%; float: left; margin: 0px 0px 15px; }
+
+	.DataTable td.ColumnHeader { height: 25px; padding-left: 10px; font: bold 11px segoe ui,Arial,sans-serif; text-align: left; color: #FFF; background: #79BDFA; }
+		.DataTable td.ColumnHeader.Sortable { padding-left: 16px; background: url('/Image/DataTable/IconoOrdenable.png') no-repeat 2px 2px #79BDFA; cursor: pointer; }
+	.DataTable .ColumnHeader.Sortable.Asc { background: url('/Image/DataTable/IconoAsc.png') no-repeat 2px 2px #79BDFA; }
+	.DataTable .ColumnHeader.Sortable.Desc { background: url('/Image/DataTable/IconoDesc.png') no-repeat 2px 2px #79BDFA; }
+	.DataTable .DataFilter td { background: #79BDFA; }
+		.DataTable .DataFilter td input { width: 150px; height: 15px; margin-bottom: 2px; font-size: 12px; }
+		.DataTable .DataFilter td select { width: 150px; height: 20px; margin-bottom: 2px; font-size: 12px; }
+
+	.DataTable tbody { color: #515151; }
+		.DataTable tbody .Delete { cursor: pointer; background: url('/Image/DataTable/Delete.png') no-repeat 2px 50%; }
+		.DataTable tbody tr td { padding: 8px 5px; font: normal 11px segoe ui,Arial,sans-serif; }
+		.DataTable tbody tr.Odd td,
+		.DataTable tbody tr.Pair td { background-color: #FFF; }
+		.DataTable tbody tr td a { font-size: 12px; text-decoration: none; }
+	.DataTable .Hidden { display: none; }
+
+	/* Pagintaion */
+	.DataTable tfoot tr td { text-align: center; }
+		.DataTable tfoot tr td .Pagination { width: auto; height: 29px; margin-left: 1px; margin-right: 1px; padding-top: 8px; float: right; text-align: center; }
+		.DataTable tfoot tr td .Pages { width: auto; height: 38px; margin: 3px auto -38px; }
+			.DataTable tfoot tr td .Pages .Home,
+			.DataTable tfoot tr td .Pages .Back,
+			.DataTable tfoot tr td .Pages .Next,
+			.DataTable tfoot tr td .Pages .End,
+			.DataTable tfoot tr td .Pages .Page { width: 40px; height: 25px; margin-left: 1px; margin-right: 1px; padding-top: 10px; float: left; cursor: pointer; text-align: center; border: 1px solid #FFFFFF; }
+				.DataTable tfoot tr td .Pages .Page.Active { cursor: default; }
+			.DataTable tfoot tr td .Pages .Home { background: url('/Image/DataTable/Home.png') no-repeat 14px 13px transparent; }
+			.DataTable tfoot tr td .Pages .Back { background: url('/Image/DataTable/Back.png') no-repeat 14px 13px transparent; }
+			.DataTable tfoot tr td .Pages .Next { background: url('/Image/DataTable/Next.png') no-repeat 14px 13px transparent; }
+			.DataTable tfoot tr td .Pages .End { background: url('/Image/DataTable/End.png') no-repeat 14px 13px transparent; }
+				.DataTable tfoot tr td .Pages .Home:hover,
+				.DataTable tfoot tr td .Pages .Back:hover,
+				.DataTable tfoot tr td .Pages .Next:hover,
+				.DataTable tfoot tr td .Pages .End:hover,
+				.DataTable tfoot tr td .Pages .Page:hover { background-color: #D4D4D4; border: 1px solid #D4D4D4; }
+				.DataTable tfoot tr td .Pages .Home:active,
+				.DataTable tfoot tr td .Pages .Back:active,
+				.DataTable tfoot tr td .Pages .Next:active,
+				.DataTable tfoot tr td .Pages .End:active,
+				.DataTable tfoot tr td .Pages .Page:active { background-color: #000000; }
+			.DataTable tfoot tr td .Pages .Active { border: 1px solid #D4D4D4; }
+			.DataTable tfoot tr td .Pages .Home,
+			.DataTable tfoot tr td .Pages .End,
+			.DataTable tfoot tr td .Pagination.PageToPage { width: 0px; display: none; }
+
+	.DataTable tbody td { border-bottom: 1px solid #d4dfd7; }
+	.DataTable tbody tr:hover td { background-color: #F6F6F6; }

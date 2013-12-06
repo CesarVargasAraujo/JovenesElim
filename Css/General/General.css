@@ -1,0 +1,19 @@
+﻿/*Panel*/
+.general-panel { border: 1px solid #D4DFD7; padding: 10px 5px 5px; margin-bottom: 25px; }
+	.general-panel .general-panel-title { width: auto; height: auto; float: left; margin: -29px 0 0; padding: 0 5px; font: bold 20px segoe ui,Arial,sans-serif; color: #4CB4E8; text-shadow: 2px 2px 2px #D4DFD7; background-color: #FFFFFF; }
+	.general-panel table { width: 100%; margin-left: 5%; }
+
+/*Table*/
+.general-table { }
+	.general-table .general-table-title { padding: 5px; font: bold 16px segoe ui,Arial,sans-serif; color: #FFFFFF; background-color: #000000; }
+		.general-table .general-table-title.general-table-loading { color: #000000; background: url("/Image/General/Horizontal-Loader.gif") no-repeat scroll center center #000000; }
+
+
+/*Inputs*/
+input[type=text], select { width: 200px; height: 20px; }
+	input[type=text].money { width: 100px; text-align: right; }
+	input[type=text].datepicker { width: 100px; text-align: center; }
+
+/*Custome*/
+.ui-datepicker-trigger { margin-bottom: -8px; }
+.general-cover{position:absolute; opacity:0.7; background-color:White;}

@@ -1,0 +1,117 @@
+﻿.MessageContainer  { width: 100%; height: auto; float: left; margin:5px 0px; }
+table .MessageContainer  { width: 100%; height: auto; float: none; margin:5px 0px; }
+.Message ul { margin:0px; padding: 0px 0px 0px 8px; }
+.Message ul li { list-style:none; }
+
+.Message .Close
+{
+    width:11px;
+    height:11px;
+    float:right;
+    margin:-7px 3px;
+    cursor:pointer;
+    opacity:0.5;
+    background: url('/Image/Messages/Close.png') no-repeat transparent;
+}
+
+.Information, .Success, .Warning, .Error, .Validation {
+    width:-moz-calc(90% - 47px);
+    width:-webkit-calc(90% - 47px);
+    width:-o-calc(90% - 47px);
+    width:calc(90% - 47px);
+		min-height: 21px;
+		margin: 0 auto;
+    padding: 10px 0 10px 45px;
+    border: 1px solid #FFFFFF;
+    background-color: #FFFFFF;
+    font-size: 12px;
+}
+
+.Information {
+    color: #1A7992;
+    border-color:#1A7992;
+    background: url('/Image/Messages/Information.png') no-repeat scroll 10px 50% #A7D6FF;
+}
+.Success  {
+    color:#47771F;
+    border-color:#CCEDB1;
+    background:url('/Image/Messages/Success.png') no-repeat scroll 10px 50% #E5F6D8;
+}
+.Warning  {
+    color:#CD9303;
+    border-color:#CD9303;
+    background: url('/Image/Messages/Warning.png') no-repeat scroll 10px 50% #FFE39D;
+}
+.Error  {
+    color:#A10505;
+    border-color:#A10505;
+    background:url('/Image/Messages/Error.png') no-repeat scroll 10px 50% #FF9F9F;
+}
+.Validation  {
+    color:#A10505;
+    border-color:#A10505;
+    background:url('/Image/Messages/Validation.png') no-repeat scroll 10px 50% #FFCDCD;
+}
+
+.MessageLoading 
+{
+  width:auto;
+  height:16px;
+  float:left;
+  margin: 10px 0 0 10px;
+  padding:0 0 0 20px;
+  color:#75CC8D;
+  background:url('/Image/Messages/Loading.gif') no-repeat scroll 0px 0px transparent;
+}
+
+.MessageInLine .Information, .MessageInLine .Success, .MessageInLine .Warning, .MessageInLine .Error, .MessageInLine .Validation {
+    width: 90%;
+    min-height:21px;
+    margin:-16px 0 0 -35px;
+    padding:10px 0 10px 35px;
+    background-color:transparent;
+    border:none;
+    font-size:14px;
+    font-weight:bold;
+    color:#515151;
+}
+
+.MessageInLine .Message .Close,
+.Info .Close,
+.DataTable .Close
+{
+  display:none;
+}
+
+.Info {
+    width: 90%;
+    min-height:21px;
+    float:left;
+    margin:0px;
+    padding:10px 0 10px 35px;
+    background:transparent;
+    border:none;
+    font-size:14px;
+    font-weight:normal;
+    color:#515151;
+}
+
+.DataTable .Information,
+.DataTable  .Success,
+.DataTable  .Warning,
+.DataTable  .Error,
+.DataTable  .Validation 
+{
+  width:90%;
+  margin:0;
+  padding: 0 0 0 21px;
+  font-size: 10.5px;
+  border:medium none;
+  background-color:transparent;
+}
+
+.DataTable .Information { background: url('/Image/Messages/InformationSmall.png') no-repeat scroll 0 0 transparent; }
+.DataTable .Success  { background:url('/Image/Messages/SuccessSmall.png') no-repeat scroll 0 0 transparent; }
+.DataTable .Warning  { background: url('/Image/Messages/WarningSmall.png') no-repeat scroll 0 0 transparent; }
+.DataTable .Error  { background:url('/Image/Messages/ErrorSmall.png') no-repeat scroll 0 0 transparent; }
+.DataTable .Validation  { background:url('/Image/Messages/ValidationSmall.png') no-repeat scroll 0 0 transparent; }

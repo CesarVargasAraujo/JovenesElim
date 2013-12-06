@@ -1,0 +1,71 @@
+﻿<Dictionary>
+	<Pages>
+		<Entry Key="registro.aspx" Value="Registro" />
+	</Pages>
+
+	<General>
+		<Entry Key="NoData" Value="No tiene datos" />
+		<Entry Key="CurrentPage" Value="página actual" />
+		<Days>
+			<Entry Key="Monday" Value="Lunes" />
+			<Entry Key="Tuesday" Value="Martes" />
+			<Entry Key="Wednesday" Value="Miércoles" />
+			<Entry Key="Thursday" Value="Jueves" />
+			<Entry Key="Friday" Value="Viernes" />
+			<Entry Key="Saturday" Value="Sábado" />
+			<Entry Key="Sunday" Value="Domingo" />
+		</Days>
+		<Months>
+			<Entry Key="January" Value="Enero" />
+			<Entry Key="February" Value="Febrero" />
+			<Entry Key="March" Value="Marzo" />
+			<Entry Key="April" Value="Abril" />
+			<Entry Key="May" Value="Mayo" />
+			<Entry Key="June" Value="Junio" />
+			<Entry Key="July" Value="Julio" />
+			<Entry Key="August" Value="Agosto" />
+			<Entry Key="September" Value="Septiembre" />
+			<Entry Key="October" Value="Octubre" />
+			<Entry Key="November" Value="Noviembre" />
+			<Entry Key="December" Value="Diciembre" />
+			<Entry Key="SmallJanuary" Value="Ene." />
+			<Entry Key="SmallFebruary" Value="Feb." />
+			<Entry Key="SmallMarch" Value="Mar." />
+			<Entry Key="SmallApril" Value="Abr." />
+			<Entry Key="SmallMay" Value="May." />
+			<Entry Key="SmallJune" Value="Jun." />
+			<Entry Key="SmallJuly" Value="Jul." />
+			<Entry Key="SmallAugust" Value="Ago." />
+			<Entry Key="SmallSeptember" Value="Sep." />
+			<Entry Key="SmallOctober" Value="Oct." />
+			<Entry Key="SmallNovember" Value="Nov." />
+			<Entry Key="SmallDecember" Value="Dic." />
+		</Months>
+		<Date>
+			<Entry Key="FormatLargeDate" Value="{day} de {month} del {year}" />
+
+		</Date>
+	</General>
+
+	<Main>
+		<Entry Key="MainText" Value="&#8220;Ninguno tenga en poco tu juventud, sino sé ejemplo de los creyentes en palabra, conducta, amor, espíritu, fe y pureza&#8221; 1Timoteo 4:12" />
+	</Main>
+	
+	<Register>
+		<Entry Key="General" Value="General" />
+		<Entry Key="Name" Value="Nombre" />
+		<Entry Key="Surnames" Value="Apellidos" />
+		<Entry Key="Email" Value="Correo electrónico" />
+		<Entry Key="Facebook" Value="Facebook" />
+		<Entry Key="Birthday" Value="Fecha de cumpleaños" />
+		<Entry Key="Church" Value="Iglesia" />
+		<Entry Key="Cooperation" Value="Cooperación" />
+		<Entry Key="Attendance" Value="Lista de Asistencia" />
+		<Entry Key="Sector" Value="Sector" />
+		<Entry Key="Age" Value="Edad" />
+	</Register>
+
+	<Buttons>
+		<Entry Key="Save" Value="Guardar" />
+	</Buttons>
+</Dictionary>
