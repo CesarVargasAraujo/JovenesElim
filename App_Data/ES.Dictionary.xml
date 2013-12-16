@@ -2,7 +2,14 @@
 	<Pages>
 		<Entry Key="registro.aspx" Value="Registro" />
 	</Pages>
-
+  <Messages>
+    <Entry Key="EmptyInput" Value="El campo &quot;{Variable}&quot; no puede estar en blanco " Master="1" />
+    <Entry Key="BadFormat" Value="Error de formato en &quot;{Variable}&quot;." Master="1" />
+    <Entry Key="VBirthDay" Value="La fecha de cumpleaños es obligatoria." />
+    <Entry Key="IYoung" Value="Se ha guardado correctamente el joven {Young}" />
+    <Entry Key="VChurch" Value="Seleccione una iglesia" />
+    <Entry Key="IYoungEventAssitance" Value="Se ha registrado correctamente el joven {Young} al Evento {Event}" />
+  </Messages>
 	<General>
 		<Entry Key="NoData" Value="No tiene datos" />
 		<Entry Key="CurrentPage" Value="página actual" />

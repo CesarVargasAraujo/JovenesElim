@@ -7,6 +7,8 @@ using Elim.Event;
 
 public partial class WebMethods_Event : ControllerWS
 {
+  private static PCEvent PCEvent;
+
 	#region Table
 	[WebMethod()]
 	[ScriptMethod(ResponseFormat = ResponseFormat.Json)]
@@ -23,4 +25,15 @@ public partial class WebMethods_Event : ControllerWS
 		return DataTable.HtmlDataTableBuilder.S().FormatHtml();
 	}
 	#endregion
+
+  #region Register
+  [WebMethod()]
+  [ScriptMethod(ResponseFormat = ResponseFormat.Json)]
+  public static string RegisterYoungAssistance(Guid EventId, string ChurchId, string Name, string Surnames, string Email, string Facebook, string BirthDay, decimal Cooperation)
+  { 
+   PCEvent = new PCEvent();
+   PCEvent.RegisterAssistance(EventId, ChurchId == "" ? null : new Guid(ChurchId).NullG(), Name, Surnames, Email, Facebook, BirthDay == "" ? null : BirthDay.NullDT(), Cooperation);
+   return PCEvent.GetMessagesFormatJson();
+  }
+  #endregion
 }

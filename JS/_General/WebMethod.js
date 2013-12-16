@@ -10,7 +10,9 @@ var WebMethod = {
 			cache: false,
 			success: onSuccess == undefined ? function () { } : onSuccess,
 			error: function (xhr, reason, text) {
-			  try{} catch (e) { }
+			  try {
+			    alert("ReadyState: " + xhr.readyState + "\nStatus: " + xhr.status + "\nResponseText: " + xhr.responseText + "\nReason: " + reason);
+			  } catch (e) { }
 			}
 		};
 		return WebMethodOptions;

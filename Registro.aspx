@@ -6,6 +6,8 @@
   
  <%--JS--%>
   <script src="JS/Event/Table.js"></script>
+  <script src="JS/Event/NewAssistance.js"></script>
+  <script src="JS/Event/Actions.js"></script>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
@@ -21,26 +23,31 @@
       <table>
         <tr>
           <td><%=Dictionary.S("Name")%></td>
-          <td><input type="text" /></td>
+          <td><input type="text" id="NAName" /></td>
           <td><%=Dictionary.S("Surnames")%></td>
-          <td><input type="text" /></td>
+          <td><input type="text" id="NASurname" /></td>
         </tr>
         <tr>
           <td><%=Dictionary.S("Email")%></td>
-          <td><input type="text" /></td>
+          <td><input type="text" id="NAEmail" /></td>
           <td><%=Dictionary.S("Facebook")%></td>
-          <td><input type="text" /></td>
+          <td><input type="text" id="NAFacebook" /></td>
         </tr>
         <tr>
           <td><%=Dictionary.S("Birthday")%></td>
-          <td><input type="text" class="datepicker"/></td>
+          <td><input type="text" class="datepicker" id="NABirthday" /></td>
           <td><%=Dictionary.S("Church")%></td>
-          <td><select class="combobox"><option value="">---</option><%=ChurchsOptions %></select></td>
+          <td><select class="combobox" id="NAChurch"><option value="">---</option><%=ChurchsOptions %></select></td>
         </tr>
         <tr>
           <td><%=Dictionary.S("Cooperation")%></td>
-          <td><input type="text" class="money" value="<%=Event.Cost %>" /></td>
-          <td colspan="2"><input type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" value="<%=Dictionary.S("Save") %>" /></td>
+          <td><input type="text" class="money" id="NACooperation" value="<%=Event.Cost %>" /></td>
+          <td colspan="2"><input type="hidden" id="NAEventId" value="<%=Event.EventId%>" /> <input type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" adjustw="2" adjustt="2" value="<%=Dictionary.S("Save") %>" id="NASave" /></td>
+        </tr>
+        <tr>
+          <td colspan="3">
+            <div id="NAMessages" class="AutomaticClose"></div>
+          </td>
         </tr>
       </table>
     </div>

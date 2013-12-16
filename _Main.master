@@ -10,6 +10,7 @@
   <link href="Css/General/General.css" rel="stylesheet" />
   <link href="Css/General/Messages.css" rel="stylesheet" />
   <link href="Css/General/DataTable.css" rel="stylesheet" />
+  <link href="Css/General/Actions.css" rel="stylesheet" />
   <link href="Css/JQuery/south-street/jquery-ui.css" rel="stylesheet" />
 
   <%--JS JQuery--%>
@@ -24,6 +25,7 @@
   <script src="JS/_General/DataTable.js"></script>
   <script src="JS/_General/DatePicker.js"></script>
   <script src="JS/_General/Combobox.js"></script>
+  <script src="JS/_General/Actions.js"></script>  
 
   <script type="text/javascript">      
     var Global = {

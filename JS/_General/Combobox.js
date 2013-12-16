@@ -108,6 +108,10 @@
     _destroy: function () {
       this.wrapper.remove();
       this.element.show();
+    },
+    autocomplete: function (value) {
+      this.element.val(value);
+      this.input.val(value.split('|').join(' '));
     }
   });
 })(jQuery);
