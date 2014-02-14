@@ -1,7 +1,8 @@
 ﻿var $EventActions = {
-  RegisterYoungAssistance: function (EventId, ChurchId, Name, Surnames, Email, Facebook, BirthDay, Cooperation, CallBackFunction) {
+  RegisterYoungAssistance: function (EventId, YoungId, ChurchId, Name, Surnames, Email, Facebook, BirthDay, Cooperation, CallBackFunction) {
     var Params = JSON.stringify({
       EventId: EventId,
+      YoungId: YoungId,
       ChurchId: ChurchId,
       Name: Name,
       Surnames: Surnames,
@@ -11,7 +12,7 @@
       Cooperation: Cooperation.ToNumber()
     });
     WebMethod.Call("Event", "RegisterYoungAssistance", Params, function (data) {
-      CallBackFunction({ Messages: jQuery.parseJSON(data.d)});
+      CallBackFunction({ Messages: jQuery.parseJSON(data.d) });
     });
-  }  
+  }
 }

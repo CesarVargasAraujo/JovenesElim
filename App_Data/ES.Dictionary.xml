@@ -10,7 +10,7 @@
     <Entry Key="VBirthDay" Value="La fecha de cumpleaños es obligatoria." />
     <Entry Key="IYoung" Value="Se ha guardado correctamente el joven {Young}" />
     <Entry Key="VChurch" Value="Seleccione una iglesia" />
-    <Entry Key="IYoungEventAssitance" Value="Se ha registrado correctamente el joven {Young} al Evento {Event}" />
+    <Entry Key="IYoungEventAssitance" Value="Se ha registrado correctamente el joven &lt;b&gt;{Young}&lt;/b&gt; al Evento &lt;b&gt;&quot;{Event}&quot;&lt;/b&gt;" />
   </Messages>
 	<General>
 		<Entry Key="NoData" Value="No tiene datos" />

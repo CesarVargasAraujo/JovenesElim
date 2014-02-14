@@ -17,15 +17,16 @@ namespace Elim.Young
 
     #region Save
 
-    public bool SaveYoung(Guid? ChurchId, string Name, string Surnames, string Email, string Facebook, DateTime? BirthDay)
+		public bool SaveYoung(Guid? YoungId, Guid? ChurchId, string Name, string Surnames, string Email, string Facebook, DateTime? BirthDay)
     {
-      return Save(ChurchId, Name, Surnames, Email, Facebook, BirthDay);
+			return Save(YoungId, ChurchId, Name, Surnames, Email, Facebook, BirthDay);
     }
 
-    private bool Save(Guid? ChurchId, string Name, string Surnames, string Email, string Facebook, DateTime? BirthDay)
+		private bool Save(Guid? YoungId, Guid? ChurchId, string Name, string Surnames, string Email, string Facebook, DateTime? BirthDay)
     {
       #region Receive Parameters
-      Model.Young.YoungId = Guid.NewGuid();
+			bool IsNew = YoungId.IsNull();
+			Model.Young.YoungId = IsNew ? Guid.NewGuid() : YoungId;
       Model.Young.Facebook = Facebook;
       Model.Young.ChurchId = ChurchId;
       #endregion
@@ -46,8 +47,12 @@ namespace Elim.Young
       #region Save
       if (!ContainMessages)
       {
-        DBYoung.Insert(Model.Young);
-        AddMessage("IYoung", MessageType.Success, new MessageCollection() { { "Young", Model.Young.Name } });
+				if (IsNew)
+					DBYoung.Insert(Model.Young);
+				else
+					DBYoung.Update(Model.Young);
+
+				AddMessage(IsNew ? "IYoung" : "UYoung", MessageType.Success, new MessageCollection() { { "Young", Model.Young.Name } });
       }
       #endregion      
       return !ContainValidationMessages;

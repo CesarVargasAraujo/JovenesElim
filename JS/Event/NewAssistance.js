@@ -37,6 +37,7 @@ var $EventNewAssistance = {
     var $ENA = $EventNewAssistance;
     $ENA.Html.Get();
     $ENA.Events();
+    $ENA.Reset();
   },
   Events: function () {
     var $ENA = $EventNewAssistance;
@@ -60,7 +61,7 @@ var $EventNewAssistance = {
     });
 
     $ENAH.SaveButton.click(function () {
-      $EventActions.RegisterYoungAssistance($ENAV.EventId.val(), $ENAV.Church.val(), $ENAV.Name.val(), $ENAV.Surname.val(), $ENAV.Email.val(),
+      $EventActions.RegisterYoungAssistance($ENAV.EventId.val(), $ENAV.Search.val(), $ENAV.Church.val(), $ENAV.Name.val(), $ENAV.Surname.val(), $ENAV.Email.val(),
         $ENAV.Facebook.val(), $ENAV.BirthDay.val(), $ENAV.Cooperation.val(), function (data) {
           if (data.Messages.MessageTypes.SuccessMessages == "True") {
             $ENA.Reset();

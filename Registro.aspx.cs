@@ -29,6 +29,7 @@ public partial class Registro : System.Web.UI.Page
 		foreach (PMYoung Young in DBYoung.Gets())
 			SearchOptions.AppendParameterizedFormat(@"
 			<option value='{YoungId}' ChurchId='{ChurchId}' Name='{Name}' Surnames='{Surnames}' Email='{Email}' Facebook='{Facebook}' Birthday='{Birthday}'>{Sector} - {Church} - {CompleteName}</option>",
+			"{YoungId}", Young.YoungId,
 			"{ChurchId}", Young.ChurchId,
 			"{Sector}", Young.Sector,
 			"{Church}", Young.Church,
