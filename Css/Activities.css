@@ -1,0 +1,8 @@
+﻿.advertising { width: 100%; }
+	.advertising .advertising-img { width: 370px; padding: 10px; background-color: #620001; }
+	.advertising .advertising-church-img { width: 275px; height: 100px; padding: 10px; }
+	.advertising .advertising-church-title { font-size: 17px; font-weight: 600; text-align: center; }
+	.advertising .advertising-church-data { width: 275px; height: 100px; padding: 10px; font-size: 15px; text-align: left;}
+		.advertising .advertising-church-data ul { margin: 0px; }
+			.advertising .advertising-church-data ul li { list-style: none; }
+	.advertising .advertising-map { width: 550px; height: 335px; padding: 10px 0 0 10px; text-align:right; }

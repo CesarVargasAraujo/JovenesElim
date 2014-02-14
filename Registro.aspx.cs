@@ -9,16 +9,35 @@ using System.Web.UI.WebControls;
 using Ding.Core;
 using Elim.Church;
 using Elim.Event;
+using Elim.Young;
 
 public partial class Registro : System.Web.UI.Page
 {
 	protected void Page_Load(object sender, EventArgs e)
 	{
-		Database DB =Database.New();
+		Database DB = Database.New();
 
 		#region Event
 		DBEvent DBEvent = new DBEvent(DB);
-		Event = DBEvent.Get(new Guid("7A31464F-9CE0-49BA-9A7C-09888D1B1749"));
+		Event = DBEvent.Get(new Guid("5F014EA2-3515-4B63-9989-F68A01043E72"));
+		#endregion
+
+		#region Search
+		DBYoung DBYoung = new DBYoung(DB);
+		SearchOptions = new StringBuilder();
+
+		foreach (PMYoung Young in DBYoung.Gets())
+			SearchOptions.AppendParameterizedFormat(@"
+			<option value='{YoungId}' ChurchId='{ChurchId}' Name='{Name}' Surnames='{Surnames}' Email='{Email}' Facebook='{Facebook}' Birthday='{Birthday}'>{Sector} - {Church} - {CompleteName}</option>",
+			"{ChurchId}", Young.ChurchId,
+			"{Sector}", Young.Sector,
+			"{Church}", Young.Church,
+			"{CompleteName}", Young.Name + " " + Young.Surnames,
+			"{Name}", Young.Name,
+			"{Surnames}", Young.Surnames,
+			"{Email}", Young.Email,
+			"{Facebook}", Young.Facebook,
+			"{Birthday}", Young.Birthday.FormatDate());
 		#endregion
 
 		#region Churchs
@@ -34,5 +53,6 @@ public partial class Registro : System.Web.UI.Page
 	}
 
 	public PMEvent Event;
+	public StringBuilder SearchOptions;
 	public StringBuilder ChurchsOptions;
 }

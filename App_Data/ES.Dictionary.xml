@@ -1,6 +1,8 @@
 ﻿<Dictionary>
 	<Pages>
 		<Entry Key="registro.aspx" Value="Registro" />
+		<Entry Key="actividades.aspx" Value="Actividades" />
+		<Entry Key="album.aspx" Value="Albúm" />
 	</Pages>
   <Messages>
     <Entry Key="EmptyInput" Value="El campo &quot;{Variable}&quot; no puede estar en blanco " Master="1" />
@@ -60,6 +62,7 @@
 	
 	<Register>
 		<Entry Key="General" Value="General" />
+		<Entry Key="Search" Value="Buscar" />
 		<Entry Key="Name" Value="Nombre" />
 		<Entry Key="Surnames" Value="Apellidos" />
 		<Entry Key="Email" Value="Correo electrónico" />

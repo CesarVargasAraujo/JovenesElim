@@ -22,6 +22,10 @@
 
       <table>
         <tr>
+          <td><%=Dictionary.S("Search")%></td>
+          <td colspan="3" class="search" ><select class="combobox" id="NASearch"><option value="">---</option><%=SearchOptions %></select></td>
+        </tr>
+        <tr>
           <td><%=Dictionary.S("Name")%></td>
           <td><input type="text" id="NAName" /></td>
           <td><%=Dictionary.S("Surnames")%></td>

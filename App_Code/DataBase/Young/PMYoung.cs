@@ -8,7 +8,10 @@ namespace Elim.Young
 	{
 		#region Properties
 		public Guid? YoungId;
+		public Guid? SectorId;
 		public Guid? ChurchId;
+		public string Sector;
+		public string Church;
 		public string Name;
 		public string Surnames;
 		public string Email;
@@ -18,15 +21,18 @@ namespace Elim.Young
 		#endregion
 
 		#region Contructor
-		public PMYoung() : this(null, null, null, null, null, null, null, null) { }
+		public PMYoung() : this(null, null, null, null, null, null, null, null, null, null, null) { }
 
-		public PMYoung(Guid youngId, Guid churchId, string name, string surnames, string email, string facebook, DateTime birthday, DateTime registerDate)
-			: this(youngId.NullG(), churchId.NullG(), name, surnames, email, facebook, birthday, registerDate) { }
+		public PMYoung(Guid youngId, Guid sectorId, Guid churchId, string sector, string church, string name, string surnames, string email, string facebook, DateTime birthday, DateTime registerDate)
+			: this(youngId.NullG(), sectorId.NullG(), churchId.NullG(), sector, church, name, surnames, email, facebook, birthday, registerDate) { }
 
-		private PMYoung(Guid? youngId, Guid? churchId, string name, string surnames, string email, string facebook, DateTime? birthday, DateTime? registerDate)
+		private PMYoung(Guid? youngId, Guid? sectorId, Guid? churchId, string sector, string church, string name, string surnames, string email, string facebook, DateTime? birthday, DateTime? registerDate)
 		{
 			this.YoungId = youngId;
+			this.SectorId = sectorId;
 			this.ChurchId = churchId;
+			this.Sector = sector;
+			this.Church = church;
 			this.Name = name;
 			this.Surnames = surnames;
 			this.Email = email;

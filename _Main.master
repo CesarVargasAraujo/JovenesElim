@@ -11,11 +11,11 @@
   <link href="Css/General/Messages.css" rel="stylesheet" />
   <link href="Css/General/DataTable.css" rel="stylesheet" />
   <link href="Css/General/Actions.css" rel="stylesheet" />
-  <link href="Css/JQuery/south-street/jquery-ui.css" rel="stylesheet" />
+  <link href="Css/JQuery/smoothness/jquery-ui.css" rel="stylesheet" />
 
   <%--JS JQuery--%>
   <script src="JS/_JQuery/JQuery.js"></script>
-  <script src="JS/_JQuery/JQuery.UI.js"></script>
+  <script src="JS/_JQuery/JQueryUI.js"></script>
   <script src="JS/_JQuery/JQuery.AutoNumeric.js"></script>
   <%--JSCustom--%>
   <script src="JS/_General/General.js"></script>
@@ -43,6 +43,10 @@
       <img src="Image/_Main/Logo.png" alt="Jovenés Elim" width="21%" class="main-logo" />
       <div class="main-text"><%=Dictionary.S("MainText") %></div>
       <img src="Image/_Main/Eslogan.png" alt="Regresando al camino del Señor" width="16%" class="main-eslogan" />
+      <div class="main-menu">
+        <a href="Actividades.aspx" class="main-menu-activities"><%=Dictionary.S("actividades.aspx") %></a>
+        <a href="Album.aspx" class="main-menu-album">Album</a>
+      </div>
     </div>
     <div class="main-body">
       <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>

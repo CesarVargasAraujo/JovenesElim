@@ -1,12 +1,16 @@
-﻿.register-body { padding-top: 70px !important; background: url("/Image/Register/201312 Header.png") repeat-x scroll 0 0 / 75% auto rgba(0, 0, 0, 0); }
+﻿.register-body { padding-top: 70px !important; background: url("/Image/Register/201402 Header.png") repeat-x scroll 0 0 / 13% auto rgba(0, 0, 0, 0); }
 	.register-body .register-header { margin-bottom: 25px; }
-	.register-body .register-title { font: bold 40px Monotype Corsiva,segoe ui,Arial,sans-serif; text-align: center; color: #CC0000; text-shadow: 2px 2px 2px #D4DFD7; }
+	.register-body .register-title { font: bold 40px Monotype Corsiva,segoe ui,Arial,sans-serif; text-align: center; color: #850E1B; text-shadow: 2px 2px 2px #D4DFD7; }
 	.register-body .register-date { margin-top: -12px; text-align: center; }
 
 /*Custome*/
-.general-panel .general-panel-title { color: #CC0000; }
-.ui-button { float: right; margin-right: 95px; }
+.general-panel .general-panel-title { color: #850E1B; }
+#NASave.ui-button { float: right; margin-right: 100px; }
+.ui-autocomplete-input { height: 23px; width: 171px; }
+.ui-button-icon-only { height: 27px; margin-top: -3px; }
+.search .ui-autocomplete-input { width: 270px; }
 
-.DataTable .DataFilter td, .DataTable td.ColumnHeader, .DataTable td.ColumnHeader.Sortable, .DataTable .ColumnHeader.Sortable.Asc, .DataTable .ColumnHeader.Sortable.Desc { background-color: #CC0000; }
+.DataTable .DataFilter td, .DataTable td.ColumnHeader, .DataTable td.ColumnHeader.Sortable, .DataTable .ColumnHeader.Sortable.Asc, .DataTable .ColumnHeader.Sortable.Desc { background-color: #850E1B; }
 .DataTable tbody .Age { text-align: center; }
-.DataTable tbody .Cooperation  { text-align:right; }
+.DataTable tbody .Cooperation { text-align: right; }
+.DataTable #SectorName { width: 100px; }

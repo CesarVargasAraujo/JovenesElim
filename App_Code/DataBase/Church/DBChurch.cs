@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Data;
-
 using Ding.Core;
 
 namespace Elim.Church
@@ -14,6 +14,11 @@ namespace Elim.Church
 		public List<PMChurch> Gets()
 		{
 			return Gets(DB.GetTable("Churchs"));
+		}
+
+		public List<PMChurch> Gets(Guid EventId)
+		{
+			return Gets(DB.GetTable("ChurchsByEventId", "@Event", EventId));
 		}
 
 		private List<PMChurch> Gets(DataTable Table)

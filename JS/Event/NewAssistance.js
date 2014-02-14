@@ -1,7 +1,7 @@
 ﻿/// <reference path="Actions.js" />
 var $EventNewAssistance = {
   Html: {
-    Messages : null,
+    Messages: null,
     SaveButton: null,
     Get: function () {
       var $ENA = $EventNewAssistance;
@@ -11,6 +11,7 @@ var $EventNewAssistance = {
       $ENAH.Messages = $("#NAMessages");
       $ENAH.SaveButton = $("#NASave");
 
+      $ENAV.Search = $("#NASearch");
       $ENAV.Name = $("#NAName");
       $ENAV.Surname = $("#NASurname");
       $ENAV.Email = $("#NAEmail");
@@ -22,13 +23,14 @@ var $EventNewAssistance = {
     }
   },
   Values: {
+    Search: null,
     Name: null,
     Surname: null,
     Email: null,
-    Facebook : null,
+    Facebook: null,
     BirthDay: null,
     Cooperation: null,
-    Church : null,
+    Church: null,
     EventId: null
   },
   Initialize: function () {
@@ -40,6 +42,22 @@ var $EventNewAssistance = {
     var $ENA = $EventNewAssistance;
     var $ENAH = $ENA.Html;
     var $ENAV = $ENA.Values;
+
+    $(".search .ui-autocomplete-input").click(function () {
+      $(this).select();
+    });
+    
+    $ENAV.Search.change(function () {
+      var $OptionSelected = $('option:selected', $ENAV.Search);
+      $ENAV.Name.val($OptionSelected.attr("Name"));
+      $ENAV.Surname.val($OptionSelected.attr("Surnames"));
+      $ENAV.Email.val($OptionSelected.attr("Email"));
+      $ENAV.Facebook.val($OptionSelected.attr("Facebook"));
+      $ENAV.BirthDay.val($OptionSelected.attr("BirthDay"));
+      $ENAV.Church.val($OptionSelected.attr("ChurchId"));
+      $ENAV.Church.combobox("autocomplete", $('option:selected', $ENAV.Church).text());
+      $ENAV.Church.val($OptionSelected.attr("ChurchId"));
+    });
 
     $ENAH.SaveButton.click(function () {
       $EventActions.RegisterYoungAssistance($ENAV.EventId.val(), $ENAV.Church.val(), $ENAV.Name.val(), $ENAV.Surname.val(), $ENAV.Email.val(),
@@ -54,7 +72,7 @@ var $EventNewAssistance = {
         });
     });
   },
-  Reset : function(){
+  Reset: function () {
     var $ENA = $EventNewAssistance;
     var $ENAV = $ENA.Values;
     $ENAV.Name.val('');
@@ -62,6 +80,7 @@ var $EventNewAssistance = {
     $ENAV.Email.val('');
     $ENAV.Facebook.val('');
     $ENAV.BirthDay.val('');
+    $ENAV.Search.combobox("autocomplete", "");
     $ENAV.Church.combobox("autocomplete", "");
   }
 }

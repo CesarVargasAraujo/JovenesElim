@@ -30,11 +30,14 @@ namespace Elim.Event
 			Model.CurrentPage = TableData.CurrentPage;
 			Model.OrderBy = TableData.OrderBy;
 			Model.OrderByDirection = TableData.OrderByDirection;
+			Model.NoRowLimit = true;
+			Guid EventId = new Guid("5F014EA2-3515-4B63-9989-F68A01043E72");
 
 			#region systemFilters
 			Dictionary<string, string> systemFilters = new Dictionary<string, string>();
 			foreach (TableFilter Filter in TableData.Filters)
 				systemFilters.Add(Filter.Key, Filter.Value);
+			systemFilters.Add("Event", EventId.S());
 			#endregion
 
 			#region sqlFilters
@@ -52,13 +55,16 @@ namespace Elim.Event
 				Model.Results.Add(new TDEventRegister()
 				{
 					Event = Row.G("Event"),
+					Sector = Row.G("Sector"),
+					Church = Row.G("Church"),
+					Young = Row.G("Young"),
 					Numeration = Table.Rows.IndexOf(Row)+1,
-					Sector = Row.S("Sector"),
-					Church = Row.S("Church"),
+					SectorName = Row.S("SectorName"),
+					ChurchName = Row.S("ChurchName"),
 					Name = Row.S("Name"),
 					Age = Row.S("Age"),
 					Email = Row.S("Email"),
-					Cooperation = Row.S("Cooperation").FormatCurrency(),
+					Cooperation = Row.S("Cooperation").FormatCurrency()
 				});
 			}
 			#endregion
@@ -66,13 +72,13 @@ namespace Elim.Event
 			#region FiltersList
 			Model.Lists = new Dictionary<string, ColumnListFilterCollection>();
 
-			Model.Lists.Add("Sector", new ColumnListFilterCollection());
-			foreach (KeyValuePair<Guid, string> Sector in DBSector.Gets())
-				Model.Lists["Sector"].Add(Sector.Value);
+			Model.Lists.Add("SectorName", new ColumnListFilterCollection());
+			foreach (KeyValuePair<Guid, string> Sector in DBSector.Gets(EventId))
+				Model.Lists["SectorName"].Add(Sector.Value);
 
-			Model.Lists.Add("Church", new ColumnListFilterCollection());
-			foreach (PMChurch Church in DBChurch.Gets())
-				Model.Lists["Church"].Add(Church.Name);
+			Model.Lists.Add("ChurchName", new ColumnListFilterCollection());
+			foreach (PMChurch Church in DBChurch.Gets(EventId))
+				Model.Lists["ChurchName"].Add(Church.Name);
 			#endregion
 
 			return Model;

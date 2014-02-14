@@ -11,9 +11,9 @@ namespace Elim.Sector
 		public DBSector(Database DataBase) { DB = DataBase; }
 
 		#region Get
-		public Dictionary<Guid,string> Gets()
+		public Dictionary<Guid,string> Gets(Guid EventId)
 		{
-			return Gets(DB.GetTable("Sectors"));
+			return Gets(DB.GetTable("Sectors", "@Event", EventId));
 		}
 
 		private Dictionary<Guid, string> Gets(DataTable Table)
