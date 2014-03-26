@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-
 using Ding.Core;
 using Elim.Church;
 using Elim.Event;
@@ -51,6 +51,15 @@ public partial class Registro : System.Web.UI.Page
 			"{Municipality}", Church.Municipality,
 			"{Name}", Church.Name);
 		#endregion
+
+		SendEmail();
+	}
+
+	private void SendEmail() {
+		//foreach (DataRow Row in Database.New().GetTableFromQuery("SELECT * FROM Young WHERE Email IS NOT NULL").Rows)
+		//	new Gestionix.Core.CustomEmail().SendAdvertising(Row.S("Email"), Row.S("Name"));
+
+		new Gestionix.Core.CustomEmail().SendAdvertising("cesar.vargas@abatta.com", "Cesar");
 	}
 
 	public PMEvent Event;

@@ -1,0 +1,9 @@
+﻿.activity { width: calc(50% - 25px); height: auto; margin-bottom: 25px; padding-bottom: 10px; border-bottom: 3px solid #F9BF51; }
+.activity-left { float: left; }
+.activity-right { float: right; }
+.activity .activity-image { width: 50%; height: auto; float: left; }
+	.activity .activity-image img { width: 200px; }
+.activity .activity-description { width: 50%; height: auto; float: left; }
+	.activity .activity-description ul { margin: 0 -40px; }
+		.activity .activity-description ul li { list-style: none; }
+.activity .activity-text { width:100%; height:auto; font-style:italic;  }

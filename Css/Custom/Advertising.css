@@ -1,0 +1,5 @@
+﻿.advertising { width: 100%; height: auto; float: left; }
+	.advertising .advertising-image { width: 50%; height: auto; float: left; }
+	.advertising .advertising-description { width: 50%; height: auto; float: left; }
+		.advertising .advertising-description ul { margin: 0 -10px 10px; }
+			.advertising .advertising-description ul li { list-style: none; }

@@ -1,0 +1,33 @@
+﻿body { padding: 0px; background-color: #FFFFFF; font: normal 14px segoe ui,Arial,sans-serif; color: #515151; }
+@font-face { font-family: "Segoe Marker"; src: url(/Css/Font/segeo-marker.ttf) format("truetype"); }
+@font-face { font-family: "Berlin Sans FB"; src: url(/Css/Font/Berlin-Sans-FB.ttf) format("truetype"); }
+
+.main-wrapper { width: 980px; height: auto; margin: -8px auto 0px; padding: 0px; background-color: #FFFFFF; }
+
+/*Header*/
+.main-header { width: 100%; height: auto; float: left; background: url('/Image/_Main/Menu/bg-header.png') no-repeat scroll -3px 78px #FFFFFF; }
+.main-header-home-logo { width: 200px; height: 160px; position: absolute; margin-left: -952px; z-index: 10; background: url("/Image/_Main/Menu/logo.png") no-repeat scroll center center transparent; }
+.main-header-logo { width: 200px; height: 160px; position: absolute; margin-left: -555px; z-index: 10; background: url("/Image/_Main/Menu/logo.png") no-repeat scroll center center transparent; }
+.main-header-home-bgmenu { width: 100%; height: 40px; position: absolute; left: 0; top: 78px; z-index: -1; background: none repeat scroll 0 0 #9DCB37; }
+.main-header-bgmenu { width: 100%; height: 40px; position: absolute; left: 0; top: 70px; z-index: -1; background: none repeat scroll 0 0 #9DCB37; }
+.main-header-home-text { width: 100%; height: 650px; float: left; margin-top: 125px; background: #EAEAEA; }
+
+/*Home Menu*/
+.main-header-home-menu { width: 101%; height: 140px; float: left; margin: -150px -0.5% 0px -0.5%; background: url("/Image/_Main/Menu/bg-home-menu.png") repeat-x scroll 0 0 transparent; }
+	.main-header-home-menu a { width: 30%; height: 45px; float: left; margin: 5px 14px; padding-top: 65px; font: normal 30px Segoe Marker, Segoe UI; color: #515151; text-align: center; text-decoration: none; border-left: 2px solid #FFFFFF; border-right: 2px solid #FFFFFF; }
+		.main-header-home-menu a:hover { font-weight: 600; }
+		.main-header-home-menu a.activities { background: url("/Image/_Main/Icon/date_64x64.png") no-repeat scroll center 5px transparent; }
+		.main-header-home-menu a.album { background: url("/Image/_Main/Icon/camera_64x64.png") no-repeat scroll center 5px transparent; }
+		.main-header-home-menu a.contactUs { background: url("/Image/_Main/Icon/phone_64x64.png") no-repeat scroll center 5px transparent; }
+
+/*Menu*/
+.main-header-menu { height: 40px; float: left; margin:78px 0px 5px 239px;}
+	.main-header-menu a { width: auto; height: auto; float: left; margin-top: 4px; padding: 4px 10px 4px 50px; font: normal 20px Segoe Marker, Segoe UI; color: #515151; text-decoration: none; border-right: 1px solid #FFFFFF; }
+			.main-header-menu a:hover { color:#FFFFFF; }
+		.main-header-menu a.home { background: url("/Image/_Main/Icon/home_32x32.png") no-repeat scroll 12px center transparent; }
+		.main-header-menu a.activities { background: url("/Image/_Main/Icon/date_32x32.png") no-repeat scroll 12px center transparent; }
+		.main-header-menu a.album { background: url("/Image/_Main/Icon/camera_32x32.png") no-repeat scroll 12px center transparent; }
+		.main-header-menu a.contactUs { background: url("/Image/_Main/Icon/phone_32x32.png") no-repeat scroll 12px center transparent; }
+
+/*Container*/
+.main-container { width: calc(100% - 60px); height: auto; min-height: 500px; float: left; padding: 30px; background: #EAEAEA; }

@@ -1,0 +1,8 @@
+﻿.title, .title-left, .title-right { width: auto; height: auto; padding: 10px 30px; font: normal 22px Berlin Sans FB, Segoe UI; color: #FFFFFF; background: none repeat scroll 0 0 #ED6124; }
+.title-left { float: left; margin-left: -35px; margin-bottom: 5px; }
+.title-right { float: right; margin-left: -35px; }
+
+.subtitle { width: auto; height: auto; font: normal 20px Berlin Sans FB, Segoe UI; color: #ED6124; }
+
+a { color: #00AFFD; }
+	a:hover { font-weight: 600; }
